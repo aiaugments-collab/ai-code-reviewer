@@ -1,0 +1,13 @@
+{
+    "watch": [
+        "src",
+        ".yalc/@kodus/flow",
+        "node_modules/@kodus/flow/dist"
+    ],
+    "ext": "ts,js,json",
+    "ignore": [
+        "dist",
+        "**/*.spec.ts"
+    ],
+    "exec": "nest start --watch --debug 0.0.0.0:9229"
+}

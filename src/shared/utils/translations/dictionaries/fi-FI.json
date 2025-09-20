@@ -1,0 +1,97 @@
+{
+    "reviewComment": {
+        "talkToKody": "Keskustele Kodyn kanssa mainitsemalla @kody",
+        "feedback": "Oliko tämä ehdotus hyödyllinen? Reagoi 👍 tai 👎 auttaaksesi Kodya oppimaan tästä vuorovaikutuksesta."
+    },
+    "pullRequestFinishSummaryMarkdown": {
+        "withComments": "## Koodikatselmointi valmis! 🔥\n\nKoodikatselmointi on onnistuneesti suoritettu nykyisten asetustesi perusteella.\n\n",
+        "withoutComments": "# Kody-katselmointi valmis\n**Mahtavia uutisia!** 🎉\nNykyisten katselmointiasetustesi mukaisia ongelmia ei löytynyt.\n\nJatka erinomaista työtä! 🚀"
+    },
+    "pullRequestSummaryMarkdown": {
+        "title": "PR-yhteenveto (Kommentti luotu [Kody](https://kodus.io) 🤖)",
+        "codeReviewStarted": "Koodikatselmointi aloitettu! 🚀",
+        "description": "✋ Hei, tiimi! Katson jo muutettuja tiedostoja ja aloitan katselmoinnin varmistaakseni, että kaikki on kunnossa. Jos tarvitset lisätietoja, olen täällä! [Kody](https://kodus.io)",
+        "changedFiles": "📂 Muutetut tiedostot",
+        "filesTable": [
+            "Tiedosto",
+            "Tila",
+            "➕ Lisäykset",
+            "➖ Poistot",
+            "🔄 Muutokset"
+        ],
+        "summary": "📊 Muutosten yhteenveto",
+        "totalFiles": "Tiedostoja yhteensä",
+        "totalAdditions": "Lisättyjä rivejä yhteensä",
+        "totalDeletions": "Poistettuja rivejä yhteensä",
+        "totalChanges": "Muutoksia yhteensä"
+    },
+    "configReviewMarkdown": {
+        "title": "Kody-opas: Käyttö ja asetukset",
+        "interactingTitle": "Vuorovaikutus Kodyn kanssa",
+        "requestReview": "Pyydä katselmointia",
+        "requestReviewDesc": "Pyydä Kodya katselmoimaan PR:si manuaalisesti lisäämällä kommentti, jossa on komento `@kody start-review` PR:si juureen.",
+        "validateBusinessLogic": "Vahvista liiketoimintalogiikka",
+        "validateBusinessLogicDesc": "Pyydä Kodya vahvistamaan koodisi liiketoimintasääntöjä vastaan lisäämällä kommentti, jossa on komento `@kody -v business-logic`.",
+        "provideFeedback": "Anna palautetta",
+        "provideFeedbackDesc": "Auta Kodya oppimaan ja parantamaan reagoimalla sen kommentteihin 👍 hyödyllisistä ehdotuksista tai 👎 jos tarvitaan parannuksia.",
+        "configurationTitle": "Nykyiset Kody-asetukset",
+        "reviewOptionsTitle": "Katselmointiasetukset",
+        "reviewOptionsDesc": "Seuraavat katselmointiasetukset ovat käytössä tai pois käytöstä:",
+        "tableOptions": "Asetukset",
+        "tableEnabled": "Käytössä",
+        "configurationLink": "Pääset asetuksiisi tästä.",
+        "enabled": "✅",
+        "disabled": "❌"
+    },
+    "discordFormatter": {
+        "title": "📦 Insinöörimittarit",
+        "legend": {
+            "title": "Tulosten selite",
+            "same": "Tarkoittaa, että tulos pysyi __samana__",
+            "improved": "Tarkoittaa, että tulos __parani__",
+            "worsened": "Tarkoittaa, että tulos __huononi__"
+        },
+        "flowMetrics": {
+            "title": "Virtausmittarit",
+            "leadTime": {
+                "title": "Läpimenoaika",
+                "description": "Aika, joka kuluu aktiviteetin siirtymiseen tilasta ${todo} tilaan ${done}."
+            },
+            "leadTimeInWip": {
+                "title": "Läpimenoaika WIP:ssä",
+                "description": "Aika, joka kuluu aktiviteetin siirtymiseen tilasta ${wip} tilaan ${done}."
+            },
+            "throughput": {
+                "title": "Läpimeno",
+                "description": "Viimeisen 7 päivän aikana tilaan ${done} saavuttaneiden kohteiden määrä.",
+                "items": "kohteet"
+            },
+            "bugRatio": {
+                "title": "Virhesuhde",
+                "description": "Virheiden määrä WIP:ssä suhteessa WIP:ssä olevien aktiviteettien kokonaismäärään viimeisen 7 päivän aikana."
+            },
+            "leadTimeByColumn": {
+                "title": "Läpimenoaika sarakkeittain",
+                "description": "Aika, jonka kohde viettää *P75* jokaisessa taulusi tilassa."
+            }
+        },
+        "doraMetrics": {
+            "title": "Dora-mittarit",
+            "deployFrequency": {
+                "title": "Julkaisutiheys",
+                "description": "Julkaisutiheys viikossa.",
+                "value": "${value} julkaisua viikossa"
+            },
+            "leadTimeForChange": {
+                "title": "Läpimenoaika muutoksille",
+                "description": "Keskimääräinen aika ensimmäisestä commitista PR:n yhdistämiseen.",
+                "value": "${value} päivää"
+            }
+        },
+        "percentiles": {
+            "p50": "P50 (Optimistinen)",
+            "p75": "P75 (Luottavainen)",
+            "p95": "P95 (Pessimistinen)"
+        }
+    }
+}

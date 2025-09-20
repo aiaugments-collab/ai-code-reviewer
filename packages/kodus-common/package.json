@@ -1,0 +1,130 @@
+{
+    "name": "@kodus/kodus-common",
+    "author": "Kodus",
+    "description": "Common types and utilities used across Kodus projects",
+    "type": "commonjs",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kodustech/kodus-common"
+    },
+    "version": "1.2.6",
+    "publishConfig": {
+        "access": "public",
+        "registry": "https://us-central1-npm.pkg.dev/$GAR_PROJECT_ID/kodus-pkg/"
+    },
+    "license": "AGPL-3.0-only",
+    "scripts": {
+        "prepack": "rm -rf dist && yarn generate-barrels && yarn types",
+        "generate-barrels": "barrelsby --delete -c barrelsby.json",
+        "types": "tsc -b --force tsconfig.build.json && tsc-alias tsconfig.build.json",
+        "test": "jest --runInBand --detectOpenHandles --forceExit",
+        "publish:gar": "source scripts/refresh-token.sh && npm publish --registry=https://us-central1-npm.pkg.dev/$GAR_PROJECT_ID/kodus-pkg/ --access public",
+        "refresh-token": "source scripts/refresh-token.sh",
+        "publish:quick": "source scripts/refresh-token.sh && yarn prepack && yarn publish:gar"
+    },
+    "files": [
+        "dist/**/*"
+    ],
+    "exports": {
+        "./types": "./dist/types/index.js",
+        "./llm": "./dist/llm/index.js",
+        "./utils": "./dist/utils/index.js",
+        "./interfaces": "./dist/interfaces/index.js",
+        "./package.json": "./package.json"
+    },
+    "typesVersions": {
+        "*": {
+            "types": [
+                "./dist/types"
+            ],
+            "llm": [
+                "./dist/llm"
+            ],
+            "utils": [
+                "./dist/utils"
+            ],
+            "interfaces": [
+                "./dist/interfaces"
+            ]
+        }
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@eslint/eslintrc": "^3.3.1",
+        "@eslint/js": "^9.34.0",
+        "@langchain/anthropic": "^0.3.26",
+        "@langchain/cohere": "^0.3.4",
+        "@langchain/community": "^0.3.53",
+        "@langchain/core": "^0.3.72",
+        "@langchain/google-genai": "^0.2.16",
+        "@langchain/google-vertexai": "^0.2.16",
+        "@langchain/mongodb": "^0.1.0",
+        "@langchain/openai": "^0.6.9",
+        "@nestjs/common": "^11.1.6",
+        "@nestjs/core": "^11.1.6",
+        "barrelsby": "^2.8.1",
+        "eslint": "^9.34.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-prettier": "^5.5.4",
+        "jest": "^30.0.5",
+        "langchain": "^0.3.31",
+        "prettier": "^3.6.2",
+        "reflect-metadata": "^0.2.2",
+        "rxjs": "^7.8.2",
+        "ts-loader": "^9.5.4",
+        "tsc-alias": "^1.8.16",
+        "tslib": "^2.8.1",
+        "typescript": "^5.9.2",
+        "typescript-eslint": "^8.40.0",
+        "zod": "^4.1.1",
+        "zod-to-json-schema": "^3.24.6"
+    },
+    "peerDependencies": {
+        "@langchain/anthropic": "^0.3.26",
+        "@langchain/cohere": "^0.3.4",
+        "@langchain/community": "^0.3.53",
+        "@langchain/core": "^0.3.72",
+        "@langchain/google-genai": "^0.2.16",
+        "@langchain/google-vertexai": "^0.2.16",
+        "@langchain/mongodb": "^0.1.0",
+        "@langchain/openai": "^0.6.9",
+        "@nestjs/common": "^11.1.6",
+        "@nestjs/core": "^11.1.6",
+        "langchain": "^0.3.31",
+        "reflect-metadata": "^0.2.2",
+        "rxjs": "^7.8.2",
+        "tslib": "^2.8.1",
+        "zod": "^4.1.1",
+        "zod-to-json-schema": "^3.24.6"
+    },
+    "jest": {
+        "moduleNameMapper": {
+            "^@/(.*)$": "<rootDir>/src/$1",
+            "^test/mocks/(.*)$": "<rootDir>/test/mocks/$1"
+        },
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "ts"
+        ],
+        "moduleDirectories": [
+            "node_modules",
+            "src",
+            "test"
+        ],
+        "rootDir": ".",
+        "roots": [
+            "src",
+            "test"
+        ],
+        "testRegex": ".*\\.spec\\.ts$",
+        "transform": {
+            "^.+\\.(t|j)s$": "ts-jest"
+        },
+        "collectCoverageFrom": [
+            "**/*.(t|j)s"
+        ],
+        "coverageDirectory": "../coverage",
+        "testEnvironment": "node"
+    }
+}
